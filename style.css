@@ -1,0 +1,697 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Changa', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(http://www.deke.com/files/images/Ball-travels-around-impossible-triangle.gif);
+    background-position:center;
+    background-color: #000;
+    background-size:contain;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+nav{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 1% 4%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+nav a{
+    color: #fff;
+    font-size: x-large;
+    text-decoration: none;    
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    padding: 0 100px;
+}
+.nav-links ul li{
+    display: inline-block;
+    margin: 5px 10px;
+}
+.nav-links ul li a{
+    font-size: 14px;
+    text-decoration: none;
+}
+.nav-links ul li a::after{
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0%;
+    background: #9A9587;
+    transition: .3s;
+}
+.nav-links ul li a:hover:after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 50px;
+    color : #E6B400
+}
+.text-box p{
+    font-size: 24px;
+}
+nav .fa-solid{
+    margin: 10px;
+}
+.about {
+    background-color: #000;
+    min-height: 70vh;
+    width: 100%;
+    background: url(./img/arriere.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+.about h1{
+    font-size: 32px;
+    padding: 25px;
+    color: #fff;
+}
+.about p{
+    font-size: 16px;
+    color: rgb(225, 219, 219);
+    padding: 25px 80px;
+}
+.about .button {
+    border-radius: 30px;
+    background-color: #E9627D;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.about a{
+    text-decoration: none;
+}
+.team {
+    min-height: 50vh;
+    width: 100%;
+    background: #2A3646;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    
+}
+.team h1{
+    font-size: 32px;
+    padding: 25px;
+    color: #fff;
+}
+.team-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 150px;
+}
+.wrapper{
+    max-height: 400px;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.wrapper::-webkit-scrollbar{
+    border: none;
+    
+}
+.wrapper::-webkit-scrollbar-track{
+    background-color: rgb(90, 166, 253);
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+}
+
+.wrapper::-webkit-scrollbar-thumb{
+    background-color: #9A9587;
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+.wrapper::-webkit-scrollbar-track-piece{
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.wrapper .member{
+    flex: 1 1 250px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    cursor: pointer;
+    min-width: 450px;
+}
+.member:hover{
+    background: #2A3646;
+    transition-duration: 0.3s;
+    border-radius: 1em;
+}
+.member img{
+    display: block;
+    width: 150px; height: 150px;
+    object-fit: cover;
+    border:4px solid #ffffff;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.member h2{
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #ffffff;
+    margin: 15px 0;
+}
+.activities{
+    min-height: 50vh;
+    width: 100%;
+    background: #6F9691;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+.activities h1{
+    font-size: 32px;
+    padding: 25px;
+    color: #fff;
+}
+.activities-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+.activity {
+    flex: 1 1 250px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    cursor: pointer;
+    width: 350px;
+}
+.activity:hover{
+    background: #6F9691;
+    transition-duration: 0.3s;
+    border-radius: 1em;
+}
+.activity h2{
+    text-transform: uppercase;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    margin: 15px 0;
+}
+.activity p{
+    color: #000;
+}
+.activities .fa-solid{
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+}
+.history {
+    min-height: 50vh;
+    width: 100%;
+    background: #9A9587;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+.history h1{
+    font-size: 32px;
+    padding: 25px;
+    color: #fff;
+}
+.history p{
+    font-size: 16px;
+    color: #fff;
+    padding: 25px 80px;
+}
+.history img{
+    width: 40%;
+    padding: 10px;
+    border-radius: 2em;
+}
+q{
+    font-size: 16px;
+    padding: 25px;
+    color: #fff;
+}
+figcaption{
+    padding: 10px;
+    text-align: right;
+    color: aquamarine;
+}
+.registration {
+    min-height: 60vh;
+    width: 100%;
+    background: #6F9691;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+.registration h1{
+    font-size: 32px;
+    padding: 25px;
+    color: #fff;
+}
+.registration p{
+    font-size: 16px;
+    color: #fff;
+    padding: 25px 80px;
+}
+.registration .button {
+    border-radius: 30px;
+    background-color: #E9627D;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    width: fit-content;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.registration a{
+    text-decoration: none;
+}
+.contact {
+    min-height: 50vh;
+    width: 100%;
+    background: #2A3646;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+.contact h1{
+    font-size: 32px;
+    padding: 25px;
+    color: #fff;
+}
+.contact h2{
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+.contact .fa-brands{
+    font-size: 50px;
+    color: #fff;
+}
+.contact .fa-solid{
+    font-size: 50px;
+    color: #fff;
+}
+.contact .activity{
+    max-width: 100px;
+}
+.contact a{
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    font-size: 12px;
+    height: 80px;
+    padding: 20px;
+}
+
+/*for smartphones users*/
+@media (max-width: 650px) {
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Changa', sans-serif;
+    }
+    
+    .header{
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(http://www.deke.com/files/images/Ball-travels-around-impossible-triangle.gif);
+        background-position:center;
+        background-color: #000;
+        background-size:contain;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+    
+    nav{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        background-color: #000;
+        padding: 1% 4%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+    }
+    nav a{
+        color: #fff;
+        font-size: x-large;
+        text-decoration: none;    
+    }
+    .nav-links{
+        flex: 1;
+        text-align: right;
+        padding: 0 50px;
+    }
+    .nav-links ul li{
+        display: inline-block;
+        margin: 5px 10px;
+    }
+    .nav-links ul li a{
+        font-size: 11px;
+        text-decoration: none;
+    }
+    .nav-links ul li a::after{
+        content: "";
+        display: block;
+        margin: auto;
+        height: 2px;
+        width: 0%;
+        background: #9A9587;
+        transition: .3s;
+    }
+    .nav-links ul li a:hover:after{
+        width: 100%;
+    }
+    
+    .text-box{
+        width: 90%;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .text-box h1{
+        font-size: 36px;
+        color : #E6B400
+    }
+    .text-box p{
+        font-size: 18px;
+    }
+    nav .fa-solid{
+        display: none;
+        margin: 10px;
+    }
+    .about {
+        background-color: #000;
+        min-height: 70vh;
+        width: 100%;
+        background: url(./img/arriere.png);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+    }
+    .about h1{
+        font-size: 32px;
+        padding: 25px;
+        color: #fff;
+    }
+    .about p{
+        font-size: 24px;
+        color: #fff;
+        padding: 25px 80px;
+    }
+    .about .button {
+        border-radius: 30px;
+        background-color: #E9627D;
+        font-size: 24px;
+        color: #000;
+        text-align: center;
+        padding: 10px;
+        margin: 20px;
+        position: relative;
+        cursor: pointer;
+    }
+    .about a{
+        text-decoration: none;
+    }
+    .team {
+        min-height: 50vh;
+        width: 100%;
+        background: #2A3646;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+        
+    }
+    .team h1{
+        font-size: 32px;
+        padding: 25px;
+        color: #fff;
+    }
+    .team-row{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px 10px;
+    }
+    .wrapper{
+        max-height: 400px;
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .wrapper::-webkit-scrollbar{
+        border: none;
+    }
+    .wrapper::-webkit-scrollbar-track{
+        background-color: rgb(99, 88, 246);
+        height: 16px;
+        width: 16px;
+        border-radius: 10px;
+    }
+    
+    .wrapper::-webkit-scrollbar-thumb{
+        background-color: #9A9587;
+        border-radius: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+    }
+    .wrapper::-webkit-scrollbar-track-piece{
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    .wrapper .member{
+        flex: 1 1 250px;
+        margin: 20px;
+        text-align: center;
+        padding: 20px 10px;
+        cursor: pointer;
+        min-width: 190px;
+    }
+    .member:hover{
+        background: #2A3646;
+        transition-duration: 0.3s;
+        border-radius: 1em;
+    }
+    .member img{
+        display: block;
+        width: 150px; height: 150px;
+        object-fit: cover;
+        border:4px solid #ffffff;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    .member h2{
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #ffffff;
+        margin: 15px 0;
+    }
+    .member p{
+        font-size: 12px;
+        white-space: pre-line; 
+    }
+    .activities{
+        min-height: 50vh;
+        width: 100%;
+        background: #6F9691;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+    }
+    .activities h1{
+        font-size: 32px;
+        padding: 25px;
+        color: #fff;
+    }
+    .activities-row{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 40px 0;
+    }
+    .activity {
+        flex: 1 1 250px;
+        margin: 20px;
+        text-align: center;
+        padding: 20px 10px;
+        cursor: pointer;
+        width: 350px;
+    }
+    .activity:hover{
+        background: #6F9691;
+        transition-duration: 0.3s;
+        border-radius: 1em;
+    }
+    .activity h2{
+        text-transform: uppercase;
+        font-size: 24px;
+        color: rgb(255, 255, 255);
+        margin: 15px 0;
+    }
+    .activity p{
+        color: #000;
+    }
+    .activities .fa-solid{
+        display: block;
+        color: white;
+        cursor: pointer;
+        font-size: 40px;
+    }
+    .history {
+        min-height: 50vh;
+        width: 100%;
+        background: #9A9587;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+    }
+    .history h1{
+        font-size: 32px;
+        padding: 25px;
+        color: #fff;
+    }
+    .history p{
+        font-size: 16px;
+        color: #fff;
+        padding: 25px 80px;
+    }
+    .history img{
+        width: 80%;
+        padding: 10px;
+        border-radius: 2em;
+    }
+    q{
+        font-size: 16px;
+        padding: 25px;
+        color: #fff;
+    }
+    figcaption{
+        font-size: 10px;
+        padding: 10px;
+        text-align: right;
+        color: aquamarine;
+    }
+    .registration {
+        min-height: 60vh;
+        width: 100%;
+        background: #6F9691;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+    }
+    .registration h1{
+        font-size: 32px;
+        padding: 25px;
+        color: #fff;
+    }
+    .registration p{
+        font-size: 16px;
+        color: #fff;
+        padding: 25px 80px;
+    }
+    .registration .button {
+        border-radius: 30px;
+        background-color: #E9627D;
+        font-size: 24px;
+        color: #000;
+        text-align: center;
+        width: fit-content;
+        padding: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+    .registration a{
+        text-decoration: none;
+    }
+    .contact {
+        min-height: 50vh;
+        width: 100%;
+        background: #2A3646;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+    }
+    .contact h1{
+        font-size: 32px;
+        padding: 25px;
+        color: #fff;
+    }
+    .contact h2{
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+    }
+    .contact .fa-brands{
+        font-size: 50px;
+        color: #fff;
+    }
+    .contact .fa-solid{
+        font-size: 50px;
+        color: #fff;
+    }
+    .contact .activity{
+        max-width: 100px;
+    }
+    .contact a{
+        text-decoration: none;
+    }
+    footer {
+        text-align: center;
+        color: #fff;
+        background-color: #000;
+        font-size: 12px;
+        height: 80px;
+        padding: 20px;
+    }
+}
