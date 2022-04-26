@@ -444,13 +444,13 @@ footer {
         padding: 25px 80px;
     }
     .about .button {
-        border-radius: 30px;
+        border-radius: 20px;
         background-color: #E9627D;
-        font-size: 24px;
+        font-size: 14px;
         color: #000;
         text-align: center;
-        padding: 10px;
-        margin: 20px;
+        padding: 5px;
+        margin: 15px;
         position: relative;
         cursor: pointer;
     }
